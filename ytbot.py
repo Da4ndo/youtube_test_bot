@@ -8,6 +8,7 @@ from discord.ext.commands import *
 import datetime
 import glob
 from discord_slash import SlashCommand
+from discord_components import DiscordComponents, Button, ButtonStyle
 ## DEFAULT IMPORTS
 
 intents = discord.Intents.all()
@@ -19,6 +20,7 @@ slash = SlashCommand(bot, sync_commands=True)
 @bot.event
 async def on_ready():
     print("Logged in as {0} ({0.id})".format(bot.user))
+    DiscordComponents(bot)
 
 ## CODE GOING HERE
 
